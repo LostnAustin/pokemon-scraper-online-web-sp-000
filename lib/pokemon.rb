@@ -29,7 +29,7 @@ class Pokemon
         pokemon.name = results[1]
         pokemon.type = results[2]
         pokemon.id = results[0]
-        results
+        pokemon
       end
 
       # db.execute(sql).map do |row|
