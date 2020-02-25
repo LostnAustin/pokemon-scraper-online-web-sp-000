@@ -29,7 +29,6 @@ class Pokemon
         pokemon.id = results[0]
         pokemon.name = results[1]
         pokemon.type = results[2]
-
         pokemon
       end
 
