@@ -25,17 +25,8 @@ class Pokemon
       LIMIT 1
       SQL
       results =  db.execute(sql, id)
-      pokemon = Pokemon.new(id:, name:, type:, db:).tap do |p|
-        pokemon.id = results[0]
-        pokemon.name = results[1]
-        pokemon.type = results[2]
-        pokemon
-      end
-
-      # db.execute(sql).map do |row|
-      #   self.new(row)
-      # end.first
-
+      pokemon = Pokemon.new(id: results[0], name: results[1], type: results[2], db:)
+      pokemon
     end
 
   # if self.id
