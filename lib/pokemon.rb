@@ -25,7 +25,7 @@ class Pokemon
       LIMIT 1
       SQL
       results =  db.execute(sql, id).flatten
-      binding.pry
+      # binding.pry
       pokemon = Pokemon.new(id: id, name: results[0], type: results[1], db: db)
       pokemon
     end
