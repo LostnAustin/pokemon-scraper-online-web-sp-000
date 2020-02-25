@@ -26,9 +26,9 @@ class Pokemon
       SQL
       results =  db.execute(sql, id)
       pokemon = Pokemon.new(id, name, type, db).tap do |p|
-        p.name = results[1]
-        p.type = results[2]
-        p.id = results[0]
+        pokemon.name = results[1]
+        pokemon.type = results[2]
+        pokemon.id = results[0]
         results
       end
 
