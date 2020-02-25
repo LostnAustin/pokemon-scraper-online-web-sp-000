@@ -25,9 +25,11 @@ class Pokemon
       WHERE id = ?
       LIMIT 1
       SQL
-        db.execute(sql, self.name, self.type)
-      @id = db.execute(sql).map do |row|
-        self.new(row)
+        db.execute(sql, id)
+      results = Pokemon.new.tap do |p|
+        p.name = results[1]
+        p.type = results[2]
+        p.id = results[0]
       end
 
       # db.execute(sql).map do |row|
